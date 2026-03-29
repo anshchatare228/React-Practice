@@ -10,8 +10,8 @@
 
     <script src="https://unpkg.com/supersimpledev/react.js"></script>
     <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
-
     <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    
     <script type="text/babel">
         const button = <button>hello</button>;
         const paragraph = <p>paragraph of text</p>;
@@ -48,15 +48,38 @@
             );
 
         }
-
+  
         function App() {
+            const chatMessage = [{
+                message: "Hello chatbot",
+                sender: "user"
+            },
+            {
+                message: "Hi! how can I help you ?",
+                sender: "bot"
+            },
+            {
+                message: "Whats todays date ?",
+                sender: "user"
+            },
+            {
+                message: "Today is 13th of March 2026",
+                sender: "bot"
+            }];
+
+            const chatMessageComponents = chatMessage.map((chatMessage)=>{
+                return(
+                    <ChatMessage 
+                        message = {chatMessage.message}
+                        sender = {chatMessage.sender}
+                    />
+                );
+            });
+
             return (
                 <div>
                     <ChatInput />
-                    <ChatMessage message="Hello chatbot" sender="user" />
-                    <ChatMessage message="Hi! how can I help you ?" sender="bot" />
-                    <ChatMessage message="Whats todays date ?" sender="user" />
-                    <ChatMessage message="Today is 13th of March 2026" sender="bot" />
+                    {chatMessageComponents}
                 </div>
             )
         } 
