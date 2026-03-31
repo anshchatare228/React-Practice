@@ -7,16 +7,26 @@ import './App.css'
 function App() {
   return (
     <>
-      <body className='bg-black'>
-        <nav className='bg-gray-500 flex items-center justify-around h-[5rem]'>
-          <h1 className='text-green-900 text-2xl'>Hello Man</h1>
-          <h1 className='text-green-900 text-2xl'>Hello Man</h1>
-          <h1 className='text-green-900 text-2xl'>Hello Man</h1>
-          <h1 className='text-green-900 text-2xl'>Hello Man</h1>
-          <h1 className='text-green-900 text-2xl'>Hello Man</h1>
-        </nav>
-      </body>
+      <PageOne />
     </>
+  )
+}
+
+function PageOne(){
+  return(
+    <body className='bg-zinc-800 overflow-x-hidden relative'>
+        <nav className='bg-black/80 h-[8rem] flex items-center'>
+          <div className='ml-12 flex'>
+            <img src={reactLogo} className='h-10'/>
+            <h1 className='text-[rgb(88,196,220)] text-4xl'>React facts</h1>
+          </div>
+        </nav>
+
+        <main className='mx-6'>
+          <h1 className='text-[4rem] text-white'>Fun Facts About React</h1>
+          <img src={reactLogo} className='absolute left-[77rem] top-[9rem] h-[35rem] mt-10'/>
+        </main>
+      </body>
   )
 }
 
