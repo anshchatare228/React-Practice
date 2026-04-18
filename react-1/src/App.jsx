@@ -6,15 +6,7 @@ import heroImg from './assets/hero.png'
 import Header from "./Header"
 import Hero from "./Hero"
 
-function App() {
-  return (
-    <>
-      <PageOne />
-    </>
-  )
-}
-
-function PageOne(){
+function App(){
   return(
     <>
       <Header />
